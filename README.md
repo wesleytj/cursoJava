@@ -580,3 +580,218 @@ int valorInt = Integer.parseInt(valor);
 
 ###### Para converter String para Float, é só alterar os Ints anteriores para Float.
 
+# Exercícios
+
+```java
+/*Em relação aos tipos básicos de dados (tipos primitivos), assinale a opção INCORRETA.
+
+a) booleano (ou Lógico): conjuto de valores falso e verdadeiro.
+b) vetor: estrutura que suporta NxM posições de um mesmo tipo.
+c) carcater: qualquer conjunto de caracteres alfanuméricos.
+d) inteiro: qualquer número inteiro, negativou, nulo ou positivo.
+e) real: qualquer número real, negativo, nulo ou positivo.
+*/
+```
+
+`Resposta: b) Vetor. Justificativa: Vetor não é um tipo primitivo.`
+
+```java
+/*Marque 1 para dados do tipo inteiro e 2 para dados de outros tipos.
+(2) "582.4"
+(2) .verdadeiro.
+(1) 105
+(1) -102
+(2) "0"
+(2) "informação"
+(2) 0.82
+
+a) 2, 2, 1, 1, 1, 2, 1
+b) 2, 2, 1, 1, 2, 2, 2
+c) 1, 1, 1, 2, 2, 1, 2
+d) 1, 2, 2, 2, 1, 1, 1*/
+```
+
+`Resposta: b) 2 2 1 1 2 2 2`
+
+```java
+/*Assinale a alternativa que contenha nomes válidos de variáveis.
+
+a) índice, #pagina, contexto
+b) nome1, sobrenome2, senha3
+c) 2-nome, sobrenome, endereco
+d) 1-nome, 2-sobrenome, 3-senha
+*/
+```
+
+ `Resposta: b) nome1, sobrenome2, senha3`
+
+```java
+/*Assinale a alternativa que completa corretamente a lacuna da afirmativa a seguir.
+
+São caracterizados como tipos __________ os dados númericos positivos ou negativos, excluindo-se destes qualquer fracionário.
+
+a) caracteres
+b) lógicos
+c) inteiro
+d) reais*/
+```
+
+ `Resposta: c) inteiros` 
+
+ ```java
+ /*Considerando os tipos de dados, relacione as colunas e, a seguir, assinale a alternativa com a sequencia correta.
+ 
+ (1) Inteiros           () 35; 0; -56
+ (2) Reais              () .F.;.V.
+ (3) Caracteres         () "Rua Brigadeiro Lyra"
+ (4) Lógicos            () -0.5; 1.8; -4
+ 
+ a) 3, 1, 4, 2
+ b) 2, 4, 3, 1
+ c) 1, 2, 3, 4
+ d) 1, 4, 3, 2*/
+ ```
+
+`Resposta: d) 1 4 3 2`
+
+
+
+# Operadores Aritméticos
+
+( + ) Adição:
+		* 5 + 2 = 7
+
+( - ) Subtração:
+
+  * 5 - 2 = 3
+
+( * ) Multiplicação:
+
+  * 5 + 2 = 7
+
+( / ) Divisão:
+
+  * 5 / 2 = 2.5
+
+( % ) Resto:
+
+  * 5 % 2 = 1
+
+
+
+# Operadores Unários
+
+( ++ ) Incremento:
+ * a++
+    * a = a + 1
+
+( -- ) Decremento:
+
+ * a--
+   	* a = a - 1
+
+##### Pós Incremento
+
+```java
+int numero = 5;
+int valor = 5 + numero++;
+System.out.println(valor);
+
+/*O código acima irá mostrar em tela o valor 10 e não 11. Pois ele vai primeiro somar os números e depois de somar, ele irá incrementar 'numero'*/
+```
+
+##### Pré Incremento
+
+```java
+int numero = 5;
+int valor = 5 + ++numero;
+System.out.println(valor);
+
+/*O código acima irá mostrar em tela o valor 11. Pois ele vai primeiro incrementar 'numero' e depois somar com 5.*/
+```
+
+
+
+# Operadores de Atribuição
+
+( += ) Somar e atribuir:
+
+ * a += b
+   	* a = a + b
+
+( -= ) Subtrair e atribuir:
+
+ * a -= b
+    * a = a - b
+
+( *= ) Multiplicar e atribuir:
+
+ * a *= b
+    * a = a * b
+
+( /= ) Dividir e atribuir:
+
+ * a /= b
+    * a = a / b
+
+( %= ) Resto e atribuir:
+
+ * a %= b
+    * a = a % b
+
+
+
+# Classe Math
+
+* PI
+  * Constante π
+    * Math.PI
+* pow
+  * Exponenciação
+    * Math.pow(5,2)
+* sqrt
+  * Raiz Quadrada
+    * Math.sqrt(25)
+* cbrt
+  * Raiz Cúbica
+    * Math.cbrt(27)
+
+
+
+# Arredondamentos
+
+* abs
+  * Valor Absoluto
+    * Math.abs(-10)
+      * 10
+* floor
+  * Arredonda para Baixo
+    * Math.floor(3.9)
+      * 3
+* ceil
+  * Arredonda para Cima
+    * Math.ceil(4.2)
+      * 5
+* round
+  * Arredonda Aritmeticamente
+    * Math.round(5.6)
+      * 6
+    * Math.round(3.3)
+      * 3
+
+
+
+# Números aleatórios
+
+##### Random
+
+Para gerar números aleatórios, utilizamos o método random.
+
+* Math.random()
+
+  ```java
+  double aleatorio = Math.random();
+  //O método random gera somente um número entre 0 e 1.
+  ```
+
+  
