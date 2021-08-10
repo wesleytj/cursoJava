@@ -70,6 +70,8 @@
   * Livro de análise de sistemas
   * Análise de Sistemas
 
+
+
 # Java Básico
 
 #### Pacotes
@@ -84,6 +86,8 @@ Como por exemplo:
 * entre outros...
 
 Esses pacotes mencionados acima, precisam ser importados, por meio do comando `import`.
+
+
 
 # Biblioteca de Interface
 
@@ -158,4 +162,421 @@ public class FXMLDocumentController implements Initializable{
 	}
 }
 ```
+
+
+
+# Identificando e Nomeando Pacotes, Classes, Variáveis e Constantes
+
+#### Pacotes
+
+Os pacotes sempre tem todas as letras minúsculas.
+
+```java
+package meupacote;
+package pacote;
+```
+
+#### Classes
+
+As classes sempre terão as primeiras letras maiúculas.
+
+```java
+public class MinhaClasse{}
+public class Pessoa{}
+public class MinhaTerceiraClasse{}
+```
+
+**Obs.** Interfaces também seguem esse padrão.
+
+#### Variáveis
+
+As variáveis sempre serão minúsculas e em caso de duas palavras ou mais, a primeira palavra será minúsculas e as demais terão a primeira letra maiúscula.
+
+```java
+String nome;
+int idade;
+String enderecoCompleto;
+String umaVariavelQualquerDeExemplo;
+```
+
+**Obs.** Vale ressaltar que as variáveis não são as únicas que seguem esse padrão. Métodos e Atributos também seguem esse mesmo padrão.
+
+#### Constantes
+
+As constantes sempre terão todas as letras maiúsculas.
+
+```java
+const SOUUMACONSTANTE;
+const VALOR_DE_PI;
+```
+
+
+
+# Criando o primeiro programa em JAVA
+
+```java
+package primeiroprograma;
+
+public class MeuPrimeiroPrograma{
+	public static void main(String [] args){
+		System.out.println("Olá Mundo!");
+	}
+}
+```
+
+
+
+# Exercícios
+
+Indique a opção que contém o valor final da variável X, após a execução do trecho de programa em Português Estruturado mostrado. Considere os seguintes valores: A = 3 ; B = 2 ; C = 8 ; D = 7.
+
+se .não. (A > 3) .e. .não. (B < 5) então 
+	X <- 10
+senão
+	se(A >= 2) .ou. (C <= 1) então
+		X <- (A + D) / 2
+	senão
+		se(A = 2) .ou. (B < 7) então
+			X <- (A + 2) * (B - 2)
+		senão
+			X <- (A + C) / B * (C + D)
+		fim_se
+	fim_se
+fim_se
+
+a) 10
+**b) 5**
+c) zero
+d) 82,5
+
+Indique a alternativa que tem a representação na forma da expressão aritmética abaixo:
+Z = 5² / (32-13) + 8.2
+
+a) Z = 5 * 5 / (32-13) + 8X2
+b) Z = ← (5 * 5 / (32-13) + (8X2)
+c) Z = 5 ↑ 2 / (32-13) + 8X2
+**d) Z ← ((5 ↑ 2) / (32-13) + (8X2))**
+
+Construa um programa que mostre a data e hora atuais do sistema, o idioma do sistema e a resolução da tela. *Resolução Exercícios 4*
+
+
+
+# Exemplos de Pacotes em JAVA
+
+#### java.applet
+
+Para criação de aplicativos
+
+#### java.util
+
+Pacote de utilitários, como por exemplo, monitoramento de teclado para entrada de dados.
+
+#### java.math
+
+Pacote para funções matemáticas
+
+#### java.net
+
+Pacote para redes
+
+#### javax.sound
+
+Pacote com funções estendidas para som
+
+#### javax.swing
+
+Pacote para interfaces visuais
+
+#### E javafx.fxml
+
+
+
+# Comentários em Códigos
+
+#### // Para comentários de uma linha
+
+```java
+//Esse é um comentário de exemplo.
+```
+
+#### /* Para comentários de múltiplas linhas */ 
+
+```java
+/*Esse
+é um
+comentário de
+multiplas linhas*/
+
+// ou
+
+/*
+* Também pode
+* fazer assim
+* pra ficar mais
+* bonitinho
+*/
+```
+
+#### /* * Comentário para documentação */
+
+```java
+/**
+Exemplo de comentário para documentação em JAVA
+@author Wesley Jacques
+@version 1.0
+@since 2021-08-09
+*/
+
+```
+
+Esse comentário  é muito semelhante ao anterior, mas repare que ele inicia com dois asteriscos na abertura do comentário, sendo assim, é utilizado para documentação do código.
+
+
+
+# Introdução SWING
+
+A biblioteca Swing, permite a criação de interfaces gráficas para ambientes de janelas.
+Swing vem de outra biblioteca ainda mais antiga, a AWT (Abstract Window Toolkit)
+Vídeo de explicação: [(6198) Curso de Java #05 - Introdução ao Swing e JavaFX - YouTube](https://www.youtube.com/watch?v=cYMruFKwqf0&t=983s)
+
+
+
+# Tipos primitivos e manipulação de dados
+
+Existem quatro tipos básicos de tipos primitivos, sendo eles:
+
+* Inteiro
+
+  * Para declaração de um tipo Inteiro utilizamos o nome do tipo + nome da variável + a(o) atribuição/valor da variável.
+
+    ```java
+    int idade = 3;
+    ```
+
+  * **Typecast** a declaração por typecast, seria da seguinte forma:
+
+    ```java
+    int idade = (int) 3;
+    ```
+
+  * Por meio de **classe/objeto/Wrapper Class**
+
+    ```java
+    Integer idade = new Integer(3);
+    ```
+
+  * Tipos primitivos:
+
+    * byte
+      * Ocupa o espaço de 1 byte na memória (Até 127)
+    * short
+      * Ocupa o espaço de 2 bytes na memória (Até 32 767)
+    * int
+      * Ocupa o espaço de 4 bytes na memória (Até 2 147 483)
+    * long
+      * Ocupa o espaço de 8 bytes na memória (Até 2⁶³)
+
+* Real
+
+  * Para declaração de um tipo Real utilizamos o nome do tipo + nome da variável + a(o) atribuição/valor da variável.
+
+    ```java
+    float salario = 1825.54f;
+    ```
+
+  * **Typecast** a declaração por typecast, seria da seguinte forma:
+
+    ```java
+    float salario = (float) 1825.54;
+    ```
+
+  * Por meio de **classe/objeto/Wrapper Class**
+
+    ```java
+    Float salario = new Float(1825.54);
+    ```
+
+  * Tipos primitivos:
+
+    * float
+      * Ocupa o espaço de 4 bytes na memória
+    * double
+      * Ocupa o espaço de 8 bytes na memória
+
+* Caractere/Literais
+
+  * Para declaração de um tipo Caractere utilizamos o nome do tipo + nome da variável + a(o) atribuição/valor da variável.
+
+    ```java
+    char letra = 'A';
+    ```
+
+  * **Typecast** a declaração por typecast, seria da seguinte forma:
+
+    ```java
+    char letra = (char) 'A';
+    ```
+
+  * Por meio de **classe/objeto/Wrapper Class**
+
+    ```java
+    Character letra = new Character('A');
+    ```
+
+  * Tipos primitivos:
+
+    * char
+      * Ocupa o espaço de 1 byte na memória
+    * Classe Invólucro
+      * String
+        * Ocupa o espaço de 1 byte/cada na memória
+
+* Logico
+
+  * Para declaração de um tipo Logico utilizamos o nome do tipo + nome da variável + a(o) atribuição/valor da variável.
+
+    ```java
+    boolean casado = false;
+    ```
+
+  * **Typecast** a declaração por typecast, seria da seguinte forma:
+
+    ```java
+    boolean casado = (boolean) false;
+    ```
+
+  * Por meio de **classe/objeto/Wrapper Class**
+
+    ```java
+    Boolean casado = new Boolean(false);
+    ```
+
+  * Tipos primitivos:
+
+    * boolean
+
+      * Ocupa o espaço de 1 bit na memória
+
+      
+
+# Saídas de Dados
+
+System.out....
+
+**System** = Sistema;
+**out** = Saída;
+**...** = forma da saída;
+
+* **print**
+
+  * Esse comando para saída de dados, faz com que os dados apareçam em tela e a próxima informação aparece na mesma linha
+
+  * System.out.print("");
+
+    ```java
+    float nota = 8.5f;
+    System.out.print("Sua nota é: " + nota)
+    System.out.print("Fim!")
+    ```
+
+    A saída em tela ficará `Sua nota é 8,5 Fim!`
+
+* **println**
+
+  * Esse comando faz com que crie uma nova linha após a exibição.
+
+  * System.out.println("");
+
+    ```java
+    float nota = 8.5f;
+    System.out.println("Sua nota é: " + nota)
+    System.out.print("Fim!")
+    ```
+
+    A saída em tela ficará 
+
+    ```
+    Sua nota é 8,5
+    Fim!
+    ```
+
+* **printf**
+
+  * Esse comando é específico para formatação de texto/string
+
+  * System.out.printf("");
+
+    ```java
+    float pi = (float) Math.PI;
+    System.out.print("O valor de PI é " + pi);
+    //Esse método irá retornar em tela 
+    // " O valor de PI é 3.1415927 "
+    
+    /*Mas e se quisermos que o valor tenha apenas duas casas decimais?*/
+    
+    float pi = (float) Math.PI;
+    System.out.printf("O valor de PI é %.2f", pi);
+    //Esse método irá retornar em tela 
+    // " O valor de PI é 3.14 "
+    ```
+
+* **format**
+
+  * Esse comando é exatamente igual ao printf
+
+  
+
+# Entrada de dados
+
+Ao contrário da saída de dados que o JAVA já vem com os comandos de prints dentro do pacote `.lang` junto com o JAVA.
+Para entrada de dados não tem nenhum comando padrão já incluso, para isso, precisamos importar uma biblioteca que tem essa opção, que nesse caso, é a biblioteca `.util` e o objeto `.Scanner`.  
+
+```java
+import java.util.Scanner;
+```
+
+E para utilizar, como todo objeto, temos que inicia-lo, chamamos de instanciar o objeto.
+
+```java
+import ava.util.Scanner;
+
+Scanner teclado = new Scanner(System.in);
+//Scanner é a classe
+// teclado é a variável
+//new é a Instancia
+
+System.out.print("Digite a primeira nota do aluno: ");
+float nota1 = teclado.nextFloat();
+System.out.print("\nA nota é: " + nota1);
+
+```
+
+#### Comandos de entrada para cada tipo
+
+* int
+  * nextInt();
+* float
+  * nextFloat();
+* String
+  * nextLine();
+
+
+
+# Conversão de tipos
+
+#### Convertendo Int > String
+
+```java
+int numero = 30;
+String numeroString = Integer.toString(idade);
+```
+
+#### Convertendo String > Int
+
+```java
+String valor = "30";
+int valorInt = Integer.parseInt(valor);
+```
+
+###### Para converter String para Float, é só alterar os Ints anteriores para Float.
 
