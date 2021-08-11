@@ -794,4 +794,133 @@ Para gerar números aleatórios, utilizamos o método random.
   //O método random gera somente um número entre 0 e 1.
   ```
 
-  
+
+
+# Operadores Lógicos e Relacionais
+
+##### Operador Ternário
+
+```java
+Se (n1 > n2) entao
+	maior <- n1
+senao
+	maior <- n2
+FimSe
+
+//Operador ternário
+
+maior = n1 > n2 ? n1 : n2
+```
+
+No exemplo acima de operador ternário, estamos atribuindo um valor a varável `maior`. Esse valor dependerá do resultado da condição `Se` . Mas no primeiro método, precisamos de 5 linhas para atribuir o valor a variável, mas podemos fazer a mesma coisa, com apenas uma linha.
+No segundo exemplo, `maior` é o nome da variável, `n1 > n2 ? ` é a condição, `n1 : n2` é o que será feito.
+
+* n1 > n2 ?
+
+  * É o mesmo que
+    `Se (n1 > n2) entao`
+
+    * Em código é o mesmo que
+
+      ```java
+      if(n1 > n2){
+      
+      }
+      ```
+
+* n1 : n2
+
+  * É o mesmo que
+    `maior <- n1` se a condição for verdadeira e
+    `maior <- n2` se a condição for falsa.
+
+    * Em código, é o mesmo que
+
+      ```java
+      {
+      	maior = n1;
+      }else{
+      	maior = n2;
+      }
+      ```
+
+```java
+if(n1 > n2){
+	maior = n1;
+}else{
+	maior = n2;
+}
+```
+
+é o mesmo que:
+
+```java
+maior = n1 > n2 ? n1 : n2;
+```
+
+##### Operadores Relacionais
+
+* ( > ) maior que
+  * 8 > 2
+* ( < ) menor que
+  * 1 < 5
+* ( >= ) maior ou igual a
+  * 7 >= 3
+* ( <= ) menor ou igual a
+  * 4 <= 4
+* ( == ) igual a
+  * 9 = 9
+* ( != ) diferente de
+  * 6 != 0
+
+##### Operadores Lógicos
+
+* ( && ) E
+  * true && true
+    * true
+  * true && false
+    * false
+  * false && false
+    * false
+* ( || ) OU
+  * true || true
+    * true
+  * true || false
+    * true
+  * false || false
+    * false
+* ( ^ ) XOU
+  * true ^ true
+    * false
+  * true ^ false
+    * true
+  * false ^ false
+    * false
+* ( ! ) NAO
+  * O NÃO ele inverte o valor de um resultado
+  * true
+    * false
+  * false
+    * true
+
+
+
+# Comparação entre Strings
+
+```java
+String nome1 = "Wesley";
+String nome2 = "Wesley";
+String nome3 = new String("Wesley");
+String resultado = (nome1 == nome2) ? "igual" : "diferente";
+System.out.println(resultado);
+//Resultado "igual"
+
+String resultado2 = (nome1 == nome3) ? "igual" : "diferente";
+System.out.println(resultado2);
+//Resultado "diferente"
+
+String resultado3 = (nome1.equals(nome3)) ? "igual" : "diferente";
+System.out.println(resultado3);
+//Resultado "igual"
+```
+
